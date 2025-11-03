@@ -208,14 +208,14 @@ else:
             with withdraw_cols[1]:
                 st.markdown("**S&P 500 Portfolio**")
                 st.metric(
-                    "Median annual withdrawal",
+                    "Median average annual withdrawal",
                     format_currency(median_withdrawal_spx),
                     help="Median ending balance × median withdrawal rate",
                 )
                 st.metric(
                     f"Total over {retirement_years} years",
                     format_currency(total_income_spx),
-                    help="Median annual withdrawal × years in retirement",
+                    help="Median average annual withdrawal × years in retirement",
                 )
     except FileNotFoundError as err:
         st.error(f"Missing factor file: {err}")
