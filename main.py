@@ -213,7 +213,7 @@ else:
                     help="Median ending balance × median withdrawal rate",
                 )
                 st.metric(
-                    f"Total over {retirement_years} years",
+                    f"Total Lifetime Retirement Spending over {retirement_years} years",
                     format_currency(total_income_spx),
                     help="Median average annual withdrawal × years in retirement",
                 )
