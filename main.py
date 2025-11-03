@@ -176,17 +176,6 @@ else:
 
         st.caption("Returns use rolling windows of the selected allocation's annual factors.")
 
-        explanation = (
-            f"For each {years}-year simulation we take the selected month's factor, then every 12th row "
-            "to represent annual growth, multiplying all factors together with the upfront investment."
-        )
-        if years == 30:
-            explanation += (
-                " Example: simulation #1 uses rows 1, 13, 25, …, 349; "
-                "simulation #2 starts at row 2 and uses 2, 14, 26, …, 350."
-            )
-        st.info(explanation)
-
         if years >= 20 and spend_amount > 0 and not withdrawals.empty:
             withdrawal_row = withdrawals.reindex([years]).ffill().bfill().iloc[0]
             median_rate = float(withdrawal_row.get("Median", 0.0))
