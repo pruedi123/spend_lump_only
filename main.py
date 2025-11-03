@@ -195,14 +195,14 @@ else:
             with withdraw_cols[0]:
                 st.markdown("**Global Portfolio**")
                 st.metric(
-                    "Median annual withdrawal",
+                    "Median average annual withdrawal",
                     format_currency(median_withdrawal_global),
                     help="Median ending balance × median withdrawal rate",
                 )
                 st.metric(
                     f"Total over {retirement_years} years",
                     format_currency(total_income_global),
-                    help="Median annual withdrawal × years in retirement",
+                    help="Median average annual withdrawal × years in retirement",
                 )
 
             with withdraw_cols[1]:
